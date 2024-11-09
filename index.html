@@ -1,0 +1,41 @@
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Drag-and-Drop Table</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="libs/papaparse.min.js"></script>
+    <script src="libs/sortable.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>CSV Drag-and-Drop Table</h1>
+
+        <!-- Section Separator -->
+        <hr class="separator">
+
+        <!-- File Upload and Sample Data Button -->
+        <input type="file" id="csvInput" accept=".csv" />
+        <button id="sampleDataBtn">Insert Sample Data</button>
+
+        <!-- Text Input Area for Pasting Data -->
+        <textarea id="textInput" placeholder="Paste your table data here..." rows="10"></textarea>
+
+        <!-- Table Container (Ensures Selection Only Includes Table Data) -->
+        <div id="tableContainer">
+            <table id="dataTable"></table>
+        </div>
+
+        <!-- Export Button -->
+        <button id="exportBtn">Export to CSV</button>
+    </div>
+</body>
+</html>
